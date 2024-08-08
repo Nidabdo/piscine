@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/08 10:06:37 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/08 14:35:21 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/08 13:16:42 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/08 13:46:01 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
+#include <unistd.h>
 
-void	ft_ultimate_div_mod(int *a, int *b)
+int	ft_strlen(char *str)
 {
-	int	resdiv;
-	int	resmod;
+	int	i;
 
-	resdiv = *a / *b;
-	resmod = *a % *b;
-	*a = resdiv;
-	*b = resmod;
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }
 /*
 int main(void)
 {
-	int a = 10;
-	int b = 3;
-	
-	ft_ultimate_div_mod(&a, &b);
-	printf("%d, %d", a, b);
+	char chaine[] = "test";
+	printf("%i", ft_strlen(chaine));
 	return (0);
 }
 */
