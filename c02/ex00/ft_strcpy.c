@@ -1,20 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/10 11:27:49 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/10 15:58:42 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/09 10:49:54 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/10 18:06:59 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	rush(int x, int y);
+#include <stdio.h>
 
-int	main(void)
+char *ft_strcpy(char *dest, char *src)
 {
-	rush(4, 4);
-	return (0);
+    int i;
+
+    i = 0;
+    while (src[i] != '\0')
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+    return (dest);
+}
+
+int main(void)
+{
+    char src[] = "griehgore";
+    char dest[20];
+    
+
+    printf("Source: %s\n", src);
+    ft_strcpy(dest, src);
+    printf("Destination: %s\n", dest);
 }

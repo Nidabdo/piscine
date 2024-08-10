@@ -6,7 +6,7 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 11:27:56 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/10 13:23:02 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/10 15:59:04 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	hortop(int x)
 	while (x > hor)
 	{
 		if (hor == 0 || hor == x - 1)
-			ft_putchar('o');
+			ft_putchar('\\');
 		else
 			ft_putchar('-');
 		hor++;
@@ -35,8 +35,8 @@ void	vermid(int x, int y)
 	int	ver;
 	int	hor;
 
-	ver = 1;
-	while (ver < y - 1)
+	ver = 0;
+	while (ver < y - 2)
 	{
 		ft_putchar('|');
 		hor = 1;
