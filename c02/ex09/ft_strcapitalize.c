@@ -6,7 +6,7 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 13:38:44 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/11 14:54:39 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/11 17:28:04 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,17 @@ char	*ft_strcapitalize(char *str)
 	}
 	while (str[i] != '\0')
 	{
-		if (str[i - 1] == ' ')
+		if (!(str[i - 1] >= '0' && str[i - 1] <= '9'))
 		{
-			if (str[i] >= 'a' && str[i] <= 'z')
+			if (!(str[i - 1] >= 'a' && str[i - 1] <= 'z'))
 			{
-				str[i] -= 32;
+				if (!(str[i - 1] >= 'A' && str[i - 1] <= 'Z'))
+				{
+					if (str[i] >= 'A' && str[i] <= 'Z')
+						str[i] += 32;
+					if (str[i] >= 'a' && str[i] <= 'z')
+						str[i] -= 32;
+				}
 			}
 		}
 		i++;

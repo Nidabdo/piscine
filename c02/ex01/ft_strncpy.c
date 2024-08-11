@@ -6,7 +6,7 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 10:07:54 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/11 10:27:05 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/11 16:59:08 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	while (n > i)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
 /*
