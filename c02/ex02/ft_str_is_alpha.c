@@ -1,39 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/09 10:49:54 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/11 11:45:03 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/11 10:36:24 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/11 11:43:34 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_alpha(char *str)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (src[i] != '\0')
+	if (str[0] == '\0')
 	{
-		dest[i] = src[i];
+		return (1);
+	}
+	while (str[i])
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			j = 1;
+		}
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			j = 1;
+		}
+		else
+		{
+			return (0);
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (j);
 }
+
 /*
 int main(void)
 {
-	char src[] = "griehgore";
-	char dest[20];
-	
-
-	printf("Source: %s\n", src);
-	ft_strcpy(dest, src);
-	printf("Destination: %s\n", dest);
+	printf("%d", ft_str_is_alpha("a5"));
+	return (0);
 }
 */

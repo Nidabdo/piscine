@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/09 10:49:54 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/11 11:45:03 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/11 10:07:54 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/11 10:27:05 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i] != '\0' && n > i)
 	{
 		dest[i] = src[i];
 		i++;
@@ -30,10 +30,10 @@ int main(void)
 {
 	char src[] = "griehgore";
 	char dest[20];
-	
+	int n = 3;
 
 	printf("Source: %s\n", src);
-	ft_strcpy(dest, src);
+	ft_strncpy(dest, src, n);
 	printf("Destination: %s\n", dest);
 }
 */
