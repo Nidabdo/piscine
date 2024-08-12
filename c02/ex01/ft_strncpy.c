@@ -6,11 +6,11 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/11 10:07:54 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/11 16:59:08 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/12 10:41:27 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+// #include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -32,8 +32,8 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 /*
 int main(void)
 {
-	char src[] = "griehgore";
-	char dest[20];
+	char src[] = "test";
+	char dest[] = "Ceci est un test";
 	int n = 3;
 
 	printf("Source: %s\n", src);
