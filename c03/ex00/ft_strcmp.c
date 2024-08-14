@@ -1,43 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 09:54:00 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/14 15:58:09 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/12 08:13:15 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/14 15:57:54 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
+#include <stdio.h>
+#include <string.h> 
 
-char	*ft_strcat(char *dest, char *src)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
+	while (s1[i] != '\0' && s1[i] == s2[i])
 	{
 		i++;
 	}
-	while (src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
+	return (s1[i] - s2[i]);
 }
-/*
-int main(void)
+
+/* int main(void)
 {
-	char dest[] = "Bonjour, ";
-	char src[] = "au revoir";
-	printf("%s", ft_strcat(dest, src));
+	char s1[] = "pomme";
+	char s2[] = "pomme";
+	printf("%d\n", ft_strcmp(s1, s2));
+	printf("%d", strcmp(s1, s2));
 	return (0);
-}
-*/
+} */

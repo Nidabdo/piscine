@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 09:54:00 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/14 15:58:09 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/14 08:05:14 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/14 08:16:46 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
+#include <unistd.h>
 
-char	*ft_strcat(char *dest, char *src)
+int	ft_strlen(char *str)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
-	while (src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
+	return (i);
 }
-/*
-int main(void)
-{
-	char dest[] = "Bonjour, ";
-	char src[] = "au revoir";
-	printf("%s", ft_strcat(dest, src));
-	return (0);
-}
-*/
