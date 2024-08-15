@@ -6,12 +6,12 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 09:54:00 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/14 15:58:09 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 10:10:41 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strcat(char *dest, char *src)
 {

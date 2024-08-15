@@ -6,7 +6,7 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 09:23:16 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/14 15:58:03 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 10:10:01 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 
 /* int main(void)
 {
-	char s1[] = "";
-	char s2[] = "";
-	unsigned int n = 10;
+	char s1[] = "20";
+	char s2[] = "20";
+	unsigned int n = 0;
 
 	printf("%d\n", ft_strncmp(s1, s2, n));
-	printf("%d", strncmp(s1, s2, n));
+	printf("%d", ft_strncmp(s1, s2, n));
 	return (0);
 } */

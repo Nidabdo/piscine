@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strcmp.c                                           :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 08:13:15 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/12 12:48:26 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/15 10:48:05 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/15 15:57:42 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int ft_atoi(char *str)
 {
 	int	i;
-	int	res;
+	char *nb;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0')
+	while (str[i])
 	{
-		res = s1[i] - s2[i];
-		if (res > 0)
-			return (res);
-		if (res < 0)
-			return (res);
+		if (str[i] >= '0' && str[i] <= '9')
+			nb[i] = str[i];
 		i++;
 	}
-	return (res);
 }
 
-/*
 int main(void)
 {
-	char s1[] = "caab";
-	char s2[] = "caaa";
-	printf("%d", ft_strcmp(s1, s2));
-	return (0);
+	printf("%d\n",ft_atoi(" ---+--+1234ab567"));
 }
-*/
