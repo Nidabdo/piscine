@@ -6,28 +6,39 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 10:48:05 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/15 15:57:42 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/16 10:55:30 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
 	int	i;
-	char *nb;
+	int	sign;
+	int	nb;
 
 	i = 0;
-	while (str[i])
+	sign = 1;
+	nb = 0;
+	while (str[i] == ' ')
+		i++;
+	while (str[i] == '-' || str[i] == '+')
 	{
-		if (str[i] >= '0' && str[i] <= '9')
-			nb[i] = str[i];
+		if (str[i] == '-')
+			sign = sign * -1;
 		i++;
 	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb * 10 + str[i] - '0';
+		i++;
+	}
+	return (sign * nb);
 }
 
-int main(void)
+/* int main(void)
 {
 	printf("%d\n",ft_atoi(" ---+--+1234ab567"));
-}
+} */
