@@ -6,7 +6,7 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 08:15:02 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/16 10:56:13 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/16 11:02:43 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
 	if (nb < 0)
 	{
 		ft_putchar('-');
@@ -33,7 +38,7 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb + '0');
 }
 
-/* int main(void)
+int main(void)
 {
-	ft_putnbr(42);
-} */
+	ft_putnbr(-2147483648);
+}
