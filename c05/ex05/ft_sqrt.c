@@ -1,46 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 12:42:17 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/19 17:59:20 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/19 13:15:52 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/19 17:28:09 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 
-int	ft_iterative_factorial(int nb)
+int ft_sqrt(int nb)
 {
-	int	i;
-	int	res;
-
-	i = 1;
-	res = 1;
-	if (nb < 0)
-		return (0);
-	else
-	{
-		while (i <= nb)
-		{
-			res = res * i;
-			i++;
-		}
-		return (res);
-	}
-	return (0);
+    int i;
+    
+    i = 0;
+    if (nb <= 0)
+        return (0);
+    while (i * i < nb)
+        i++;
+    if (i * i == nb)
+        return (i);
+    else
+        return (0);
 }
-// int main(int argc, char *argv[])
-// {
-// 	int nb = atoi(argv[1]);
-// 	if (argc == 2)
-// 	{
-// 		printf("%d", ft_iterative_factorial(nb));
-// 	}
-// 	else
-// 		printf("%s", "Error");
-// 	return (0);
-// }
+
+int main(void)
+{
+    int nb = 10000;
+
+    printf("%d", ft_sqrt(nb));
+    return (0);
+}
