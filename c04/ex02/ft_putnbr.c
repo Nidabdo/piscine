@@ -6,7 +6,7 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 08:15:02 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/16 11:02:43 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/20 16:00:26 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb + '0');
 }
 
-int main(void)
-{
-	ft_putnbr(-2147483648);
-}
+// int main(void)
+// {
+// 	ft_putnbr(-2147483648);
+// }

@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/14 08:08:39 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/20 16:00:12 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/20 11:15:05 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/20 12:04:41 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+int main(int argc, char *argv[])
 {
-	int	i;
+    int i;
+    int j;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, str[i], 1);
-		i++;
-	}
+    i = argc - 1;
+    j = 0;
+    while (i >= 1)
+    {
+        while (argv[i][j])
+        {
+            write(1, &argv[i][j], 1);
+            j++;
+        }
+        write(1, "\n", 1);
+        j = 0;
+        i--;
+    }
+    return (0);
 }
