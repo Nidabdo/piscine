@@ -6,7 +6,7 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 10:48:05 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/20 09:45:02 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/20 17:25:21 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	sign = 1;
 	nb = 0;
-	while (str[i] == ' ' || str[i] >= 9 && str[i] <= 13)
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	while (str[i] == '-' || str[i] == '+')
 	{
@@ -38,7 +38,7 @@ int	ft_atoi(char *str)
 	return (sign * nb);
 }
 
-/* int main(void)
-{
-	printf("%d\n",ft_atoi(" ---+--+1234ab567"));
-} */
+// int main(void)
+// {
+// 	printf("%d\n",ft_atoi(" ---+--+1234ab567"));
+// }

@@ -6,7 +6,7 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 13:15:52 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/19 17:28:09 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/21 10:26:25 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int ft_sqrt(int nb)
         return (0);
 }
 
-int main(void)
-{
-    int nb = 10000;
+// int main(void)
+// {
+//     int nb = 10000;
 
-    printf("%d", ft_sqrt(nb));
-    return (0);
-}
+//     printf("%d", ft_sqrt(nb));
+//     return (0);
+// }
