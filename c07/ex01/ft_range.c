@@ -1,47 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 12:35:07 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/22 10:59:01 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/22 08:03:36 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/22 16:27:53 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-int	ft_strlen(char *str)
+int *ft_range(int min, int max)
 {
-	int	i;
+	int *range;
+	int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	if (min >= max)
+		return NULL;
+	range = malloc((max - min) * sizeof(int));
+	if (!range)
+		return (NULL);
+	while (i < (max - min))
+	{
+		range[i] = min + i;
 		i++;
-	return (i);
-}
-
-char *ft_strdup(char *src)
-{
-    char *dup;
-    int i;
-
-    i = 0;
-    dup = malloc(1 + ft_strlen(src) * sizeof(char));
-    while (src[i])
-    {
-        dup[i] = src[i];
-        i++;
-    }
-    return (dup);
+	}
+	return (range);
 }
 
 // int main(void)
 // {
-//     char *dup = ft_strdup("test");
-//     printf("%s", dup);
-//     free(dup);
+//     int *range = ft_range(0, 10);
+//     int i = 0;
+// 	while (i < 10)
+// 	{
+// 		printf("%d\n", range[i]);
+// 		i++;
+// 	}
+//     free(range);
 //     return (0);
 // }

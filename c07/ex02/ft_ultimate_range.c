@@ -1,47 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 12:35:07 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/22 10:59:01 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/22 12:02:20 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/22 17:55:12 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-int	ft_strlen(char *str)
+int ft_ultimate_range(int **range, int min, int max)
 {
-	int	i;
+	int i;
 
 	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char *ft_strdup(char *src)
-{
-    char *dup;
-    int i;
-
-    i = 0;
-    dup = malloc(1 + ft_strlen(src) * sizeof(char));
-    while (src[i])
+	if (min >= max)
     {
-        dup[i] = src[i];
-        i++;
-    }
-    return (dup);
+		*range = NULL;
+		return (0);
+	}
+	*range = (int *)malloc((max - min) * sizeof(int));
+	while (i < (max - min))
+	{
+		range[0][i] = min + i;
+		i++;
+	}
+	return (max - min);
 }
 
-// int main(void)
-// {
-//     char *dup = ft_strdup("test");
-//     printf("%s", dup);
-//     free(dup);
-//     return (0);
-// }
+int main(void)
+{
+	int *range;
+	int	res;
+	int i;
+
+	i = 0;
+	res = ft_ultimate_range(&range, 10, 15);
+		while (i < 10)
+	{
+		printf("%d\n", range[i]);
+		i++;
+	}
+	free(range);
+	return (0);
+}
