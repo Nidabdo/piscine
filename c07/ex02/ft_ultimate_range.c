@@ -6,7 +6,7 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 12:02:20 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/22 17:55:12 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/25 13:31:19 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int main(void)
 
 	i = 0;
 	res = ft_ultimate_range(&range, 10, 15);
-		while (i < 10)
+	while (i < 5)
 	{
 		printf("%d\n", range[i]);
 		i++;
