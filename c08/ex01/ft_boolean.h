@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 09:54:00 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/26 12:35:55 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/26 12:45:39 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/26 16:03:07 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
-char	*ft_strcat(char *dest, char *src)
-{
-	int	i;
-	int	j;
+# define TRUE 1
+# define FALSE 0
+# define EVEN(nbr) (nbr % 2 == 0)
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define SUCCESS 1 
+# include <unistd.h>
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
-}
-/*
-int main(void)
-{
-	char dest[] = "Bonjour, ";
-	char src[] = "au revoir";
-	printf("%s", ft_strcat(dest, src));
-	return (0);
-}
-*/
+typedef int	t_bool;
+
+#endif

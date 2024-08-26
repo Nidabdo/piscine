@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 09:54:00 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/26 12:35:55 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/26 12:42:43 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/26 12:44:13 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#ifndef FT_H
+# define FT_H
 
-char	*ft_strcat(char *dest, char *src)
-{
-	int	i;
-	int	j;
+void ft_putchar(char c);
+void ft_swap(int *a, int *b);
+void ft_putstr(char *str);
+int ft_strlen(char *str);
+int ft_strcmp(char *s1, char *s2);
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
-}
-/*
-int main(void)
-{
-	char dest[] = "Bonjour, ";
-	char src[] = "au revoir";
-	printf("%s", ft_strcat(dest, src));
-	return (0);
-}
-*/
+#endif
