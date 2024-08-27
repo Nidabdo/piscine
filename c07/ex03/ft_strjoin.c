@@ -6,7 +6,7 @@
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 10:57:42 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/26 16:02:43 by niclambe         ###   ########.fr       */
+/*   Updated: 2024/08/27 09:43:52 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,12 @@ char *ft_strjoin(int size, char **strs, char *sep)
     int i;
     int total;
     
+    if (size == 0)
+	{
+		resultat = malloc(sizeof(char));
+		resultat[0] = '\0';
+		return (resultat);
+	}
     total = total_len(size, strs, sep);
     resultat = malloc(sizeof(char) * (total + 1));
     if (resultat == NULL)
@@ -81,9 +87,9 @@ char *ft_strjoin(int size, char **strs, char *sep)
 
 int main(void)
 {
-    char *strs[] = {"Hello", "world", "42"};
+    char *strs[] = {"Hello", "world", "42", "ewrgre", "gfgregreger"};
     char *sep = "   |   ";
-    char *result = ft_strjoin(4, strs, sep);
+    char *result = ft_strjoin(5, strs, sep);
 
     printf("%s\n", result);
     free(result);
