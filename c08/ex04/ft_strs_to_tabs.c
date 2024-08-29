@@ -1,48 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strs_to_tabs.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niclambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 12:35:07 by niclambe          #+#    #+#             */
-/*   Updated: 2024/08/28 13:54:02 by niclambe         ###   ########.fr       */
+/*   Created: 2024/08/28 13:21:00 by niclambe          #+#    #+#             */
+/*   Updated: 2024/08/28 15:00:39 by niclambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "ft_stock_str.h"
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 {
-	int	i;
+    int *resultat;
+    
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+    resultat = malloc(sizeof(int) * t_stock_str.size);
+    if(!resultat)
+        return (NULL);
+    
 }
-
-char	*ft_strdup(char *src)
-{
-	char	*dup;
-	int		i;
-
-	i = 0;
-	dup = malloc(1 + ft_strlen(src) * (sizeof(char)+ 1));
-	while (src[i])
-	{
-		dup[i] = src[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
-}
-
- int main(void)
- {
-     char *dup = ft_strdup("test");
-     printf("%s\n", dup);
-     free(dup);
-     return (0);
- }
